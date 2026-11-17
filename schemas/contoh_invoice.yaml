@@ -1,0 +1,28 @@
+# Contoh skema: ekstraksi baris item dari invoice / faktur.
+# Ubah daftar kolom sesuai kebutuhan; setiap kolom menjadi satu kolom di Excel.
+sheet_name: Invoice
+instructions: |
+  Dokumen berupa invoice atau faktur dalam Bahasa Indonesia/Inggris.
+  Satu baris = satu item barang/jasa. Ulangi nomor & tanggal invoice di setiap baris item.
+columns:
+  - name: nomor_invoice
+    type: string
+    required: true
+    description: Nomor invoice/faktur
+  - name: tanggal
+    type: date
+    description: Tanggal invoice
+  - name: vendor
+    type: string
+    description: Nama penjual/pemasok
+  - name: deskripsi_item
+    type: string
+    required: true
+  - name: qty
+    type: number
+  - name: harga_satuan
+    type: number
+    description: Harga per unit dalam Rupiah
+  - name: total
+    type: number
+    description: qty x harga_satuan (sebelum pajak)
